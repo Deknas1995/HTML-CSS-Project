@@ -1,0 +1,92 @@
+
+
+body {
+    background-color: #797a7a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ------------------------- Header -------------------------*/
+.header-grid {
+    background-color: rgb(230, 230, 230);
+    display: grid;
+    padding: 15px;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+/* Image logo */
+.header-logo-div {
+    /*border: solid rgb(199, 198, 198);*/
+    padding: 10px;
+}
+
+.header-logo-div img {
+    border: 1px solid rgb(218, 211, 211);
+    height: 100px;
+    width: 400px;
+}
+
+/* Input */
+.header-search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: solid green;*/
+    position: relative; /* Make the input container the reference for absolute positioning */
+    width: 500px;
+    padding-left: 20px;
+}
+
+.header-search-div i {
+    position: absolute;
+    left: 30px; /* Position the icon 10px from the left edge of the input */
+    top: 43%; /* Vertically center the icon */
+    color: black;
+    font-size: 16px; 
+}
+
+.header-search-div input{
+    width: 500px;
+    text-align: left;
+    padding-left: 40px; /* Create space for the icon inside the input */
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Icons */
+.header-icons-div{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /*border: solid green;*/
+}
+
+.header-icons-div a{
+    padding: 10px;
+}
+
+.favorites-logo{
+    color: rgb(255, 0, 0);
+    display: inline-block;
+    font-size: 24px;
+}
+
+.favorites-logo:hover{
+    color: #ff7d7dbd;
+}
+
+.cart-logo{
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    font-size: 24px;
+}
+
+.cart-logo:hover{
+    color: #727272;
+}
+
+
+/* ------------------------- Body -------------------------*/

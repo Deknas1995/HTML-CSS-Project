@@ -1,18 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
+/* ------------------------- Body -------------------------*/
 body {
-    background-color: #797a7a;
+    background-color: rgb(192, 192, 192);
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #333; /* Dark grey for readability */
 }
 
 
 /* ------------------------- Header -------------------------*/
-.header-grid {
-    background-color: rgb(230, 230, 230);
+.header-grid-div {
     display: grid;
     padding: 15px;
     grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto auto;
 }
 
 /* Image logo */
@@ -88,5 +91,95 @@ body {
     color: #727272;
 }
 
+.header-menu-div{
+    padding: 10px;
+    grid-column: 1 / -1; /* Span across all columns */
+}
 
-/* ------------------------- Body -------------------------*/
+.header-menu-div a{
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+/* ---------------------------------------------------------*/
+
+/* ------------------------  Hero  -------------------------*/
+.hero-div{
+    border: none;
+    border-top: 2px solid rgb(218, 218, 218);
+    display: grid;
+    padding: 15px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.hero-text-div{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    border: 2px solid rgba(230, 230, 230, 0.185);
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text-div h1{
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-text-div p{
+    margin-top: 0;
+}
+
+.hero-text-discount{
+    font-size: 23px;
+    color: #000000c7;
+}
+
+.hero-div img{
+    width: 100%;
+    height: 100%;
+}
+/* ---------------------------------------------------------*/
+
+/* ------------------------  Spots  -------------------------*/
+.spots-div {
+    display: grid;
+    padding: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.spot {
+    position: relative;
+}
+
+.spot img {
+    width: 100%;
+    transform: scale(0.8);
+    box-shadow: 2px 2px 2px 2px rgba(143, 143, 143, 0.5);
+}
+
+
+.spot:nth-child(1) img { /* For the first spot in the grid */
+    justify-self: start; /* Align image to the left */
+}
+
+.spot:nth-child(2) img { /* For the second spot in the grid */
+    justify-self: center; /* Center image */
+}
+
+.spot:nth-child(3) img { /* For the third spot in the grid */
+    justify-self: end; /* Align image to the right */
+}
+
+.spot-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* ---------------------------------------------------------*/

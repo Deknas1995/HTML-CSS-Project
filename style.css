@@ -79,6 +79,7 @@ body {
 
 .favorites-logo:hover{
     color: #ff7d7dbd;
+    transform: scale(1.2); /* Slightly scale up the icon on hover */
 }
 
 .cart-logo{
@@ -89,6 +90,7 @@ body {
 
 .cart-logo:hover{
     color: #727272;
+    transform: scale(1.2);
 }
 
 .header-menu-div{
@@ -182,4 +184,85 @@ body {
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+/* ---------------------------------------------------------*/
+
+/* ----------------------  Products  -----------------------*/
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    border: solid rgb(37, 44, 37);
+    padding: 20px;
+}
+
+.product {
+    position: relative;
+    background-color: #eeeded;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+.product img{
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.product a{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.product i {
+    position: absolute;
+    bottom: 125px;
+    right: 15px; 
+    font-size: 20px; 
+    color: #000000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.product i:hover {
+    color: #e74c3c;
+    transform: scale(1.2);
+    font-weight: 900;
+   
+}
+
+.product a:focus i,
+.product a:active i {
+    color: #e74c3c; /* Red color when clicked */
+    font-family: "Font Awesome 6 Free"; /* Ensure correct font family */
+    font-weight: 900; /* This makes it solid (bold) */
+    transform: scale(1.1); /* Optional: slightly enlarge the heart on click */
+}
+
+.product-text-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.product-text-div h4{
+    font-size: large;
+}
+
+.product-text-div p{
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+
+.product-price{
+    text-align: right;
+}
+
+
 /* ---------------------------------------------------------*/

@@ -279,5 +279,30 @@ body {
     text-align: right;
 }
 
+.products-footer-div{
+    border: solid rgb(179, 14, 157);
+    padding: 10px 10px;
+    margin: 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px;
+    
+}
+.product-footer-item-div{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-footer-item-div p {
+    font-weight: bold;
+}
+
+.product-footer-item-div i {
+    scale: 1.7;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
 
 /* ---------------------------------------------------------*/

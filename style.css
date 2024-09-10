@@ -2,7 +2,7 @@
 
 /* ------------------------- Body -------------------------*/
 body {
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(253, 253, 253);
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -11,7 +11,7 @@ body {
 
 
 /* ------------------------- Header -------------------------*/
-.header-grid-div {
+header{
     display: grid;
     padding: 15px;
     grid-template-columns: 1fr 4fr 1fr;
@@ -20,13 +20,12 @@ body {
 
 /* Image logo */
 .header-logo-div {
-    /*border: solid rgb(199, 198, 198);*/
     padding: 10px;
 }
 
 .header-logo-div img {
-    border: 1px solid rgb(218, 211, 211);
-    height: 100px;
+    border: 1px solid rgba(218, 211, 211, 0);
+    height: 150px;
     width: 400px;
 }
 
@@ -35,7 +34,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border: solid green;*/
     position: relative; /* Make the input container the reference for absolute positioning */
     width: 500px;
     padding-left: 20px;
@@ -44,7 +42,7 @@ body {
 .header-search-div i {
     position: absolute;
     left: 30px; /* Position the icon 10px from the left edge of the input */
-    top: 43%; /* Vertically center the icon */
+    top: 46%; /* Vertically center the icon */
     color: black;
     font-size: 16px; 
 }
@@ -53,7 +51,7 @@ body {
     width: 500px;
     text-align: left;
     padding-left: 40px; /* Create space for the icon inside the input */
-    height: 30px;
+    height: 40px;
     font-size: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -62,19 +60,18 @@ body {
 /* Icons */
 .header-icons-div{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    /*border: solid green;*/
 }
 
 .header-icons-div a{
-    padding: 10px;
+    margin: 20px;
 }
 
 .favorites-logo{
-    color: rgb(255, 0, 0);
     display: inline-block;
-    font-size: 24px;
+    font-size: 45px;
+    color: red;
 }
 
 .favorites-logo:hover{
@@ -85,7 +82,7 @@ body {
 .cart-logo{
     color: rgb(0, 0, 0);
     display: inline-block;
-    font-size: 24px;
+    font-size: 45px;
 }
 
 .cart-logo:hover{
@@ -101,30 +98,36 @@ body {
 .header-menu-div a{
     color: black;
     padding: 10px;
+    font-weight: 400;
+    font-size: 24px;
     text-decoration: none;
+}
+
+.header-menu-div a:hover{
+    color: #00000049;
 }
 /* ---------------------------------------------------------*/
 
 /* ------------------------  Hero  -------------------------*/
 .hero-div{
     border: none;
-    border-top: 2px solid rgb(218, 218, 218);
     display: grid;
     padding: 15px;
     grid-template-columns: 1fr 2fr;
+    box-shadow: 5px 5px 24px rgba(131, 129, 1, 0.11);
 }
 
 .hero-text-div{
     display: flex;
     flex-direction: column;
-    color: #ffffff;
-    border: 2px solid rgba(230, 230, 230, 0.185);
+    color: #000000;
+    border: 3px solid rgba(230, 230, 230, 0.301);
     align-items: center;
     justify-content: center;
 }
 
 .hero-text-div h1{
-    color: #ffffff;
+    color: #8a8700;
     margin-bottom: 10px;
 }
 
@@ -135,6 +138,7 @@ body {
 .hero-text-discount{
     font-size: 23px;
     color: #000000c7;
+    font-weight: bold;
 }
 
 .hero-div img{
@@ -214,8 +218,8 @@ body {
 }
 
 .product:hover {
-    transform: scale(0.99); /* Use transform instead of scale */
-    box-shadow: 4px 4px 8px rgba(146, 144, 144, 0.5); /* Optional: adjust box-shadow on hover */
+    transform: scale(0.99);
+    box-shadow: 4px 4px 8px rgba(146, 144, 144, 0.5);
 }
 
 .product img{
@@ -251,10 +255,10 @@ body {
 
 .product a:focus i,
 .product a:active i {
-    color: #e74c3c; /* Red color when clicked */
-    font-family: "Font Awesome 6 Free"; /* Ensure correct font family */
-    font-weight: 900; /* This makes it solid (bold) */
-    transform: scale(1.1); /* Optional: slightly enlarge the heart on click */
+    color: #e74c3c;
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 900;
+    transform: scale(1.1);
 }
 
 .product-text-div{
@@ -280,7 +284,6 @@ body {
 }
 
 .products-footer-div{
-    border: solid rgb(179, 14, 157);
     padding: 10px 10px;
     margin: 20px 20px;
     display: grid;
@@ -306,3 +309,46 @@ body {
 }
 
 /* ---------------------------------------------------------*/
+
+/* ----------------------   Footer   -----------------------*/
+
+footer{
+    background-color: #c7c7c7;
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    width: 100%;
+}
+
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px 0px 40px;
+}
+
+.footer-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.copywright-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 25px;
+}
+
+.copywright-div i{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+
+
+
+/* ---------------------------------------------------------*/
+
+
+
+/*TODO fixa bredden soms ticker ut i footer*/

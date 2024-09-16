@@ -24,7 +24,6 @@ header{
 .header-logo-div img {
     width: 100%;
     height: 100%;
-    border: solid 1px green;
 }
 
 /* Input */
@@ -239,7 +238,6 @@ header{
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
     gap: 20px;
     padding: 20px;
-    padding-top: 0px;
     box-sizing: border-box;
 }
 
@@ -321,10 +319,9 @@ header{
 
 .products-footer-div{
     width: 100%;
-    padding: 50px;
+    padding: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0px;
     box-sizing: border-box;
 }
 
@@ -332,28 +329,30 @@ header{
     font-size: 20px;
     display: flex;
     justify-content: left;
+    padding: 0% 20% 0% 20%;
 }
 
 .product-footer-item-div p {
     font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .product-footer-item-div i {
-    scale: 1.7;
-    padding-right: 20px;
+    scale: 1.8;
     display: flex;
     align-items: center;
+    padding-right: 10%;
+
 }
 
 /*Skärm mellanstor */
 @media (min-width: 640px) and (max-width: 1023px) {
     .products-footer-div{
         width: 100%;
-        padding: 50px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 0px;
         box-sizing: border-box;
     }
 
@@ -361,6 +360,7 @@ header{
         font-size: 20px;
         display: flex;
         justify-content: left;
+        padding-left: 30%;
     }
     
     .product-footer-item-div p {
@@ -369,7 +369,6 @@ header{
     
     .product-footer-item-div i {
         scale: 1.7;
-        padding-right: 20px;
         display: flex;
     }
     

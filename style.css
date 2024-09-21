@@ -12,6 +12,7 @@ body {
 
 
 /* ------------------------- Header -------------------------*/
+
 header{
     display: grid;
     padding: 0;
@@ -112,6 +113,69 @@ header{
 .header-menu-div a:hover{
     color: #00000049;
 }
+
+/* Skärm liten */
+@media (max-width: 639px) {
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:auto auto auto;
+        width: 100%;
+    }  
+
+    /* image */
+    /* Logo */
+    .header-logo-div {
+        grid-column: 1 / span 3; /* Logo spans across both columns */
+        width: 100%;
+    }
+
+    /* Input */
+    
+    .header-search-div {
+        grid-column: 1 / span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Make the input container the reference for absolute positioning */
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Icons */
+    .header-icons-div{
+        width: 100%;
+        margin-right: 40%;
+    }
+
+    .header-icons-div a{
+        margin: 0px;
+        padding: 10px;
+    }
+
+    .header-menu-div{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header-menu-div a{
+        color: black;
+        font-weight: 400;
+        font-size: 24px;
+        text-decoration: none;
+        padding: 0px;
+        padding-left: 20px;
+        box-sizing: border-box; 
+    }
+    
+    .header-menu-div a:hover{
+        color: #00000049;
+    }
+}
+
+
 /* ---------------------------------------------------------*/
 
 /* ------------------------  Hero  -------------------------*/
@@ -154,7 +218,7 @@ header{
     height: 100%;
 }
 
-@media (min-width: 640px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
     .hero-div {
         grid-template-columns: 1fr; /* Ändrar layouten till en kolumn */
         grid-template-rows: auto auto; /* Två rader, en för texten och en för bilden */
@@ -168,6 +232,17 @@ header{
         order: 2; /* Flyttar texten efter bilden */
     }
 }
+
+@media (max-width: 639px) {
+    .hero-div img {
+        height: 150%;
+    }
+
+    .hero-text-div {
+        padding-top: 10%;
+        border: none;
+    }
+}  
 /* ---------------------------------------------------------*/
 
 /* ------------------------  Spots  -------------------------*/
@@ -372,8 +447,38 @@ header{
         scale: 1.7;
         display: flex;
     }
-    
 }
+
+/*Skärm liten */
+@media (max-width: 639px) {
+    .products-grid{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .products-footer-div{
+        padding: 0px;
+        grid-template-columns: 1fr;
+    }
+
+    .product-footer-item-div{
+        padding-left: 60px;
+    }
+    
+    .product-footer-item-div p {
+        font-weight: bold;
+    }
+    
+    .product-footer-item-div i {
+        scale: 2;
+        display: flex;
+    }
+}  
 
 /* ---------------------------------------------------------*/
 
@@ -385,6 +490,7 @@ footer{
     display: flex;
     flex-direction: column;
     border: solid black;
+    box-sizing: border-box;
     overflow-x: hidden;
 }
 
@@ -412,4 +518,26 @@ footer{
     align-items: center;
     padding: 15px;
 }
+
+/*Skärm liten */
+@media (max-width: 639px) {
+    .footer-col{
+        padding-left: 5%
+    }
+
+    .footer-col p{
+        padding-left: 6%;
+        margin: 0px;
+    }
+    
+    .footer-col h1{
+        font-size: 200%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+    
+    .footer-row{
+        flex-direction: column;
+    }
+}  
 /* ---------------------------------------------------------*/

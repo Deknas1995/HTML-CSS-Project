@@ -360,7 +360,6 @@ header{
     color: #e74c3c;
     transform: scale(1.2);
     font-weight: 900;
-   
 }
 
 .product a:focus i,
@@ -500,6 +499,19 @@ footer{
     padding: 0px 40px 0px 40px;
 }
 
+.footer-col a{
+    text-decoration: none;
+    font-size: 20px; 
+    color: #000000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-col a:hover{
+    color: #66605f;
+    font-weight: 300;
+}
+
+
 .footer-row{
     width: 100%;
     display: flex;
@@ -525,7 +537,7 @@ footer{
         padding-left: 5%
     }
 
-    .footer-col p{
+    .footer-col a{
         padding-left: 6%;
         margin: 0px;
     }

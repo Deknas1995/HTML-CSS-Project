@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ------------------------- Body -------------------------*/
+body {
+    width: 100%;
+    background-color: rgb(253, 253, 253);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #333; /* Dark grey for readability */
+}
+
+
+/* ------------------------- Header -------------------------*/
+
+header{
+    display: grid;
+    padding: 0 5% 0 5%;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:60% 40%;
+    width: 80%;
+}
+
+.header-logo-div img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Input */
+.header-search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Make the input container the reference for absolute positioning */
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-search-div i {
+    width: auto;
+    position: absolute;
+    left: 30px; /* Set a fixed value for the left position */
+    top: 50%; /* Use 50% to vertically center */
+    transform: translateY(-50%); /* Adjust with transform to ensure perfect vertical centering */
+    color: black;
+    font-size: 19px;
+}
+
+.header-search-div input{
+    width: 100%;
+    text-align: left;
+    padding-left: 40px; /* Create space for the icon inside the input */
+    height: 40px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+/* Icons */
+.header-icons-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.header-icons-div a{
+    margin: 20px;
+}
+
+.favorites-logo{
+    display: inline-block;
+    font-size: 45px;
+    color: red;
+}
+
+.favorites-logo:hover{
+    color: #ff7d7dbd;
+    transform: scale(1.2); /* Slightly scale up the icon on hover */
+}
+
+.cart-logo{
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    font-size: 45px;
+}
+
+.cart-logo:hover{
+    color: #727272;
+    transform: scale(1.2);
+}
+
+.header-menu-div{
+    padding-top: 50px;
+    height: 45%;
+    grid-column: 1 / -1; /* Span across all columns */
+}
+
+.header-menu-div a{
+    color: black;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.header-menu-div a:hover{
+    color: #00000049;
+}
+
+/* Skärm liten */
+@media (max-width: 639px) {
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:auto auto auto;
+        width: 100%;
+    }  
+
+    /* image */
+    /* Logo */
+    .header-logo-div {
+        grid-column: 1 / span 3; /* Logo spans across both columns */
+        width: 100%;
+    }
+
+    /* Input */
+    
+    .header-search-div {
+        grid-column: 1 / span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Make the input container the reference for absolute positioning */
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Icons */
+    .header-icons-div{
+        width: 100%;
+        margin-right: 40%;
+    }
+
+    .header-icons-div a{
+        margin: 0px;
+        padding: 10px;
+    }
+
+    .header-menu-div{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header-menu-div a{
+        color: black;
+        font-weight: 400;
+        font-size: 24px;
+        text-decoration: none;
+        padding: 0px;
+        padding-left: 20px;
+        box-sizing: border-box; 
+    }
+    
+    .header-menu-div a:hover{
+        color: #00000049;
+    }
+}
+
+
+/* ---------------------------------------------------------*/
+
+/* ----------------------  Products  -----------------------*/
+.selected-product{
+    margin: 0 5% 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+.selected-product-text-div {
+    margin-right: 8%;
+    margin-left: 2%;
+    padding: 0 0 0 3%;
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+}
+
+.selected-product-headline {
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+.selected-product-brand {
+    font-size: 1rem; 
+    font-weight: 500; 
+    color: #666; 
+    margin-bottom: 15px;
+}
+
+.selected-product-description {
+    font-size: 0.95rem; 
+    color: #555; 
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.selected-product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.selected-product-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    width: 20%;
+    height: 7%;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px 4px rgba(146, 144, 144, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth scaling */
+}
+
+
+.selected-product-button {
+    text-align: center;
+    justify-content: center;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.selected-product-button:hover {
+    transform: scale(0.99);
+    box-shadow: 4px 4px 8px rgba(146, 144, 144, 0.5);
+}
+
+
+.similar-products-grid{
+    width: 100%;
+    scale: 0.9;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 7%;
+    box-sizing: border-box;
+    padding-bottom: 10%;
+}
+
+.similar-products-grid p{
+    grid-column: 1 / -1; /* This makes the <p> element span all columns */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    font-weight: 400;
+}
+
+.product {
+    position: relative;
+    background-color: #eeeded;
+    border-radius: 2px;
+    box-shadow: 5px 5px 25px 23px rgba(146, 144, 144, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.product:hover {
+    transform: scale(0.99);
+    box-shadow: 4px 4px 8px rgba(146, 144, 144, 0.5);
+}
+
+.product img{
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.product a{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.product p {
+    font-size: 1rem; 
+    font-weight: 500;
+    display: flex;
+    justify-content: left;
+}
+
+.product i {
+    position: absolute;
+    bottom: 125px;
+    right: 15px; 
+    font-size: 20px; 
+    color: #000000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.product i:hover {
+    color: #e74c3c;
+    transform: scale(1.2);
+    font-weight: 900;
+}
+
+.product a:focus i,
+.product a:active i {
+    color: #e74c3c;
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 900;
+    transform: scale(1.1);
+}
+
+.product-text-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.product-text-div h4{
+    font-size: large;
+}
+
+.product-text-div p{
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+
+.product-price{
+    text-align: right;
+}
+
+.products-footer-div{
+    width: 100%;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    box-sizing: border-box;
+}
+
+.product-footer-item-div{
+    font-size: 20px;
+    display: flex;
+    justify-content: left;
+    padding: 0% 20% 0% 20%;
+}
+
+.product-footer-item-div p {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.product-footer-item-div i {
+    scale: 1.8;
+    display: flex;
+    align-items: center;
+    padding-right: 10%;
+
+}
+
+/*Skärm mellanstor */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .products-footer-div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        box-sizing: border-box;
+    }
+
+    .product-footer-item-div{
+        font-size: 20px;
+        display: flex;
+        justify-content: left;
+        padding-left: 30%;
+    }
+    
+    .product-footer-item-div p {
+        font-weight: bold;
+    }
+    
+    .product-footer-item-div i {
+        scale: 1.7;
+        display: flex;
+    }
+}
+
+/*Skärm liten */
+@media (max-width: 639px) {
+    .products-grid{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .products-footer-div{
+        padding: 0px;
+        grid-template-columns: 1fr;
+    }
+
+    .product-footer-item-div{
+        padding-left: 60px;
+    }
+    
+    .product-footer-item-div p {
+        font-weight: bold;
+    }
+    
+    .product-footer-item-div i {
+        scale: 2;
+        display: flex;
+    }
+}  
+
+/* ---------------------------------------------------------*/
+
+/* ----------------------   Footer   -----------------------*/
+
+footer{
+    padding: 2%;
+    width: 100%;
+    background-color: #c7c7c7;
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px 0px 40px;
+}
+
+.footer-col a{
+    text-decoration: none;
+    font-size: 20px; 
+    color: #000000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-col a:hover{
+    color: #66605f;
+    font-weight: 300;
+}
+
+
+.footer-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.copywright-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 25px;
+}
+
+.copywright-div i{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+/*Skärm liten */
+@media (max-width: 639px) {
+    .footer-col{
+        padding-left: 5%
+    }
+
+    .footer-col a{
+        padding-left: 6%;
+        margin: 0px;
+    }
+    
+    .footer-col h1{
+        font-size: 200%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+    
+    .footer-row{
+        flex-direction: column;
+    }
+}  
+/* ---------------------------------------------------------*/

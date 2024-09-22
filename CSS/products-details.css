@@ -333,7 +333,7 @@ header{
 
 .similar-products-grid{
     width: 100%;
-    padding-left: 5%;
+    padding: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));

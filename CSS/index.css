@@ -96,6 +96,7 @@ header{
 
 .header-menu-div{
     padding-top: 50px;
+    padding-bottom: 50px;
     height: 45%;
     grid-column: 1 / -1; /* Span across all columns */
 }
@@ -370,6 +371,7 @@ header{
     transform: scale(1.1);
 }
 
+
 .product-text-div{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -442,6 +444,11 @@ header{
         font-weight: bold;
     }
     
+    .product i {
+        position: absolute;
+        bottom: 150px;
+    }
+
     .product-footer-item-div i {
         scale: 1.7;
         display: flex;

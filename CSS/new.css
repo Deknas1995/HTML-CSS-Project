@@ -100,7 +100,7 @@ input, textarea {
 }
 
 .add-button {
-    width: 25%; /* Adjusted to 50% to make the button wider */
+    width: 50%; /* Adjusted to 50% to make the button wider */
     height: auto; /* Auto height for better responsiveness */
     padding: 10px 20px; /* Padding for better button size control */
     background-color: #ffffff; /* Optional: Add a background color for styling */

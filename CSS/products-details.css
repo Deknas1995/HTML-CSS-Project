@@ -200,11 +200,13 @@ header{
     display: grid;
     grid-template-columns: 10fr 7fr;
     box-sizing: border-box;
+    position: relative;
 }
 
 .selected-product img{
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .selected-product-text-div {
@@ -265,41 +267,26 @@ header{
 
 /*Skärm liten */
 @media (max-width: 639px) {
-    .selected-product{
-        width: 100%;
-        padding: 5% 5% 0 5%;
-        display: grid;
-        grid-template-columns: 1fr;
-        box-sizing: border-box;
-    }
-
-    .selected-product i{
-        display: flex;
-    }   
-    
-    
-    .selected-product a{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
+    .selected-product {
+        grid-template-columns: 1fr; 
     }
     
     .selected-product i {
+        display: block; 
         position: absolute;
-        bottom: -35%;
+        bottom: 40%;
         right: 10%; 
-        font-size: 30px; 
-        color: #000000;
+        color: #666;
+        font-size: 29px;
         transition: color 0.3s ease, transform 0.3s ease;
     }
     
     .selected-product i:hover {
-        color: #e74c3c;
+        color: #e74c3c; 
         transform: scale(1.2);
         font-weight: 900;
     }
-    
+
     .selected-product a:focus i,
     .selected-product a:active i {
         color: #e74c3c;
@@ -309,22 +296,11 @@ header{
     }
 
     .selected-product-text-div a {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        border: solid 1px black;
-        color: black;
         width: 100%;
-        height: 10%;
-        padding: 10px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+        height: auto; /* Adjust to fit content */
     }
-    
-    .selected-product-text-div a:hover{
+
+    .selected-product-text-div a:hover {
         transform: scale(0.99);
         box-shadow: 4px 4px 8px rgba(146, 144, 144, 0.5);
     }

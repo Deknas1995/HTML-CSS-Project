@@ -100,16 +100,16 @@ input, textarea {
 }
 
 .add-button {
-    width: 50%; /* Adjusted to 50% to make the button wider */
-    height: auto; /* Auto height for better responsiveness */
-    padding: 10px 20px; /* Padding for better button size control */
-    background-color: #ffffff; /* Optional: Add a background color for styling */
-    color: rgb(0, 0, 0); /* Text color */
-    border: solid 1px black; /* Remove borders */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Text size */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-top: 10px; /* Add spacing above the button */
+    width: 50%; 
+    height: auto;
+    padding: 10px 20px; 
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0);
+    border: solid 1px black; 
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; 
 }
 
 .add-button:hover {

@@ -310,7 +310,7 @@ header{
 /* ---------------------------------------------------------*/
 
 /* ----------------------  Products  -----------------------*/
-.products-grid{
+#products-grid{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -477,7 +477,7 @@ header{
 
 /*Skärm liten */
 @media (max-width: 639px) {
-    .products-grid{
+    #products-grid{
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;

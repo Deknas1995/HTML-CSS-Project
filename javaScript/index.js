@@ -10,13 +10,14 @@ const products = [
     { name: "Orange T-shirt", price: "229 SEK", brand: "Reebok", imageUrl: "../images/product.png", slug: "orange-tshirt", isNew: false }
 ];
 
-// Funktion för att skapa produkt element
-function createProductCard(productData) {
-    // Skapa produktkortets div
+// Function to create product div
+function createProductDiv(productData) 
+{
+    // Create product div
     const productDiv = document.createElement('div');
     productDiv.classList.add('product');
 
-    // Om ny prdukt skapa en nyhets label för denna produkt 
+    // If new peoduct create a special label for it
     if(productData.isNew)
     {
         const productNewDiv = document.createElement('div');
@@ -26,7 +27,7 @@ function createProductCard(productData) {
         productDiv.appendChild(productNewDiv);
     }
 
-    // Skapa en bild-länk
+    // Create an image link
     const productLink = document.createElement('a');
     productLink.href = 'product-details.html';
 
@@ -38,7 +39,7 @@ function createProductCard(productData) {
     productDiv.appendChild(productLink);
 
 
-    // Skapa favorit/hjärta ikonen
+    // Create favorite/heart icon
     const favoriteLink = document.createElement('a');
     favoriteLink.href = "#abc";
 
@@ -48,7 +49,7 @@ function createProductCard(productData) {
     favoriteLink.appendChild(favoriteIcon);
     productDiv.appendChild(favoriteLink);
 
-    // Skapa text (beskrivning, pris och märke)
+    // Create product description containing text description, price and brand
     const productTextDiv = document.createElement('div');
     productTextDiv.classList.add('product-text-div');
 
@@ -69,14 +70,14 @@ function createProductCard(productData) {
 
     productDiv.appendChild(productTextDiv);
     
-    return productDiv; // Returnerar den skapade product diven
+    return productDiv; // Return the created products div
 }
 
-// Hämta root diven där produkterna ska läggas till som childrens
+// Get the parent div for which the products will be dynamically added to
 const productsGrid = document.getElementById('products-grid');
 
-// Skapa produkterna och lägg till i root div
+// For each product data in the products array create a product and append it to the parent div
 products.forEach(productData => {
-    const productElement = createProductCard(productData);
-    productsGrid.appendChild(productElement);
+    const productElement = createProductDiv(productData); // This will create one product
+    productsGrid.appendChild(productElement); // Appends the product to the parent div
 });
